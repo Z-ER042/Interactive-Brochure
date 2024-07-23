@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs/tire_icon.jpg">
+    <title>Changing a Car Tire</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.min.css">
+    <link rel="stylesheet" href="js/script.js">
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="progressBar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <a href="index.html"><img src="imgs/weblogocar.gif" alt="site logo"></a>
+        <div class="primary-nav">
+            <ul>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="prep.html">Preparations</a></li>
+                <li><a href="raise.html">Raising Vehicle</a></li>
+                <li><a href="tires.html">Switching Tires</a></li>
+                <li><a href="lower.html">Lowering Vehicle</a></li>
+                <li><a href="checklist.html">Post-Checklist</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container bg-dark">
+        <div class="container col-12 bg-white-porsche d-flex align-items-center justify-content-center">
+            <div class="overlay-container">
+                <div class="row w-100">
+                    <div class="container col-6">
+                        <h1>Post-tire change Checklist</h1>
+                    </div>
+                    <div class="container col-2"></div>
+                    <div class="col-3 pr-4 text-right">
+                        <p>Check all the criteria after changing your tire before finishing this manual.</p>
+                    </div>
+                </div>
+                <div class="row w-100">
+                    <div class="container col-7 mt-1">
+                        <h3 class="heading-yellow">A checklist of maintenance after tire change.</h3>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="container col-2 mt-1 d-flex justify-content-end">
+                        <a href="success.html">
+                            <button class="btn btn-outline-primary btn-grow" id="finishBtn" data-toggle="tooltip"
+                                data-placement="bottom" title="Check all the boxes on the left to proceed."
+                                disabled>Finish</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row w-100">
+                    <div class="container checklist col-7 mt-2">
+                        <div class="form-check pb-3 pl-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input pl-5" id="customCheck1">
+                                <label class="custom-control-label pl-5 pt-2" for="customCheck1">
+                                    <p>Stow away all equipment, including the changed tire(s).</p>
+                                </label>
+                                <p class="pl-5 checklist-info">Make sure to put away all equipment back into the trunk
+                                    of
+                                </p>
+                                <p class="pl-5 checklist-info">the vehicle for future use. If a flat tire was replaced, then
+                                </p>
+                                <p class="pl-5 checklist-info"> take the flat tire to the tire service center as soon</p>
+                                <p class="pl-5 checklist-info"> as possible.</p>
+                            </div>
+                        </div>
+                        <div class="form-check pb-3 pl-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input pl-5" id="customCheck2">
+                                <label class="custom-control-label pl-5 pt-2" for="customCheck2">
+                                    <p>Attach your hubcaps if necessary.</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-check pb-3 pl-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input pl-5" id="customCheck3">
+                                <label class="custom-control-label pl-5 pt-2" for="customCheck3">
+                                    <p>Check pressure of new tire.</p>
+                                </label>
+                                <p class="pl-5 checklist-info">Follow your vehicle's car owner manual for the specific air
+                                    pressure
+                                </p>
+                                <p class="pl-5 checklist-info"> for a tire. If you do not have access to it, you can set the
+                                    air pressure to </p>
+                                <p class="pl-5 checklist-info">60 psi for spare tires. For seasonal tire air pressure, you 
+                                    can find the air</p>
+                                <p class="pl-5 checklist-info">pressure of the old, replaced tires and set the new tires to that psi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container col-5 text-right">
+                        <div class="mt-5 pt-5 mb-5 pb-5"></div>
+                        <div class="mt-5 pt-5 mb-5 pb-5"></div>
+                        <div class="mt-5 pt-1 mb-5 pb-1"></div>
+                    </div>
+                </div>
+                <div class="row w-100">
+                    <div class="col-2"></div>
+                    <div class="col-8"></div>
+                    <div class="col-2 mt-5 container-yellow-border-top"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            var navbar = document.getElementById("navbar");
+            /*keep the navbar on the top of the screen when scrolling up*/
+            if (prevScrollpos > currentScrollPos) {
+                console.log(document.getElementById("navbar").style.top = "0");
+                /*add .background when scrolling up*/
+                console.log(navbar.classList.add('background'));
+            }
+            /*hide navbar off the screen when scrolling down*/
+            else {
+                console.log(document.getElementById("navbar").style.top = "-50%");
+            }
+            prevScrollpos = currentScrollPos;
+
+            /* Remove the .background when at the top of screen*/
+            if (currentScrollPos === 0) {
+                navbar.classList.remove('background')
+            }
+        };
+
+        function changeButton() {
+            var button = document.getElementById("myButton");
+            button.classList.add("btn-clicked");
+            button.innerHTML = "Clicked!";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("progress").style.width = "95%";
+        });
+
+        /* checkbox function */
+        // Function to check if all three checkboxes are checked
+        function areAllCheckboxesChecked() {
+            const checkbox1 = document.getElementById('customCheck1').checked;
+            const checkbox2 = document.getElementById('customCheck2').checked;
+            const checkbox3 = document.getElementById('customCheck3').checked;
+            return checkbox1 && checkbox2 && checkbox3;
+        }
+
+        // Function to update button status
+        function updateButtonStatus() {
+            const finishBtn = document.getElementById('finishBtn');
+            finishBtn.disabled = !areAllCheckboxesChecked();
+            finishBtn.classList.toggle('disabled-cursor', !areAllCheckboxesChecked());
+
+            // Remove tooltip attributes if button is enabled
+            if (!finishBtn.disabled) {
+                finishBtn.removeAttribute('data-toggle');
+                finishBtn.removeAttribute('data-placement');
+                finishBtn.removeAttribute('title');
+            }
+        }
+
+        // Add event listeners to checkboxes
+        document.querySelectorAll('.custom-control-input').forEach(item => {
+            item.addEventListener('change', updateButtonStatus);
+        });
+
+        // Initialize button status on page load
+        document.addEventListener("DOMContentLoaded", updateButtonStatus);
+
+    </script>
+</body>
+
+</html>

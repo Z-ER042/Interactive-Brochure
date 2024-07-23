@@ -1,0 +1,476 @@
+:root {
+    --dark-grey: #292A2E;
+    --yellow: #FCB615;
+}
+
+::selection {
+    background-color: var(--yellow);
+    color: var(--dark-grey);
+}
+
+html,
+body {
+    background-color: var(--dark-grey);
+}
+
+body,
+button {
+    color: #fff;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+h1,
+h2,
+button {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+h2 {
+    color: var(--yellow);
+    font-size: 30px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 64px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.text-dark {
+    color: var(--dark-grey);
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+ol {
+    list-style: decimal;
+}
+
+.btn {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15%;
+}
+
+#button-home {
+    padding: 2.5%;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.navbar-inverse {
+    background-color: var(--dark-grey);
+}
+
+.bg-yellow {
+    background-color: #FBA316 !important;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.bg-dark {
+    background-color: var(--dark-grey) !important;
+    color: #fff;
+}
+
+.bg-light {
+    background-color: #fff !important;
+}
+
+.container.bg-dark,
+.container.bg-light,
+.container.bg-yellow,
+.container.bg-black {
+    margin-top: 20em;
+    width: 100%;
+}
+
+/*progress*/
+.progress {
+    height: 10px;
+    background-color: var(--yellow);
+    border-radius: 0px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progressBar {
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    position: fixed;
+}
+
+/*navbar*/
+
+nav {
+    width: 65%;
+    font-size: 1.25em;
+    text-decoration: none;
+    background-color: var(--dark-grey);
+    padding-top: 30px;
+    transform: translateX(25%);
+    /*use transform instead of margin: 0 auto to make sure elements stay centered even when 
+    switching to a different sized screen*/
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+    display: block;
+}
+
+.background {
+    background-color: var(--dark-grey);
+    width: 100%;
+    transform: translateX(0%);
+    text-align: center;
+}
+
+nav a img {
+    transition: transform 0.3s ease;
+}
+
+nav a img:hover {
+    transform: scale(1.1);
+}
+
+.primary-nav {
+    border-top: 2.5px solid #fff;
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.primary-nav li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.primary-nav li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFF;
+    transition: transform 0.3s ease;
+}
+
+.primary-nav ul li:hover {
+    transform: scale(1.06);
+}
+
+.primary-nav ul li a:hover {
+    color: var(--yellow);
+}
+
+nav img {
+    height: 7rem;
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.myNav {
+    padding-bottom: 200rem;
+}
+
+/*
+.navbar-header {
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+.heading-container {
+    display: inline-block;
+}
+
+.heading-yellow {
+    color: var(--yellow);
+}
+
+.btn-outline-primary {
+    color: #fff;
+    border-color: var(--yellow);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    font-weight: 600;
+    color: var(--dark-grey);
+    background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-primary:active {
+    color: var(--dark-grey);
+    background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-secondary {
+    color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-secondary:active {
+    color: var(--dark-grey);
+    background-color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-clicked {
+    color: var(--dark-grey);
+    background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-grow {
+    transition: transform 0.3s ease;
+}
+
+.btn-grow:hover {
+    transform: scale(1.05);
+}
+
+/* home page features */
+
+#car-homepage {
+    width: 80%;
+}
+
+/* checkbox buttons + form */
+
+.container-yellow-border-top {
+    border-top: 2px solid var(--yellow);
+}
+
+.container-yellow-border-right {
+    border-right: 2px solid var(--yellow);
+}
+
+.container-yellow-border-bottom {
+    border-bottom: 2px solid var(--yellow);
+}
+
+.custom-control-input {
+    width: 40px;
+    height: 50px;
+}
+
+.custom-control-label:hover,
+.custom-control-input:hover {
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/* checkmark */
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 14px;
+    width: 10px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checklist-info {
+    margin: 0;
+}
+
+#finalActionBtn {
+    color: #fff;
+}
+
+#finalActionBtn:hover {
+    color: var(--dark-grey);
+}
+
+.disabled-cursor {
+    cursor: not-allowed;
+}
+
+.container.bg-dark img {
+    width: 80%;
+}
+
+.bg-yellow-porsche {
+    background-image: url("../imgs/yellow_porsche_above.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    min-height: 720px;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.bg-white-porsche {
+    background-image: url("../imgs/white_porsche.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    min-height: 720px;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#beamer-gif {
+    max-width: 100%;
+}
+
+/* tires.html features */
+
+.bg-beamer-gif {
+    background-image: url("../imgs/beamer.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 1080px;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.card-expand {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    height: 20rem;
+}
+
+.card #nutsExpand {
+    padding: 0;
+}
+
+.card #nutsExpand p:first-child {
+    padding-top: 40%;
+}
+
+.card #jackExpand, .card #raiseExpand {
+    padding: 0;
+}
+
+.card #jackExpand p:first-child, .card #raiseExpand p:first-child {
+    padding-top: 40%;
+}
+
+.half-transparent {
+    background-color: rgba(000, 000, 000, 0.9);
+    border: 1px solid ;
+}
+
+.stackMenu .col-12, .dropDown .col-12 {
+    width: 30rem;
+}
+
+.card-body {
+    margin-bottom: 12rem;
+}
+
+.stackMenu {
+    padding-left: 20rem;
+}
+
+#finishBtn {
+    padding: 0;
+    padding: 18%;
+    color: #fff;
+}
+
+#finishBtn:hover {
+    color: var(--dark-grey);
+}
+
+.stackMenu .btn {
+    background-color: var(--dark-grey);
+    border-color: var(--dark-grey);
+}
+
+.stackMenu .btn:hover {
+    background-color: var(--yellow);
+    color: var(--dark-grey);
+}
+
+.dropDown .btn {
+    font-size: 22px;
+}
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs/tire_icon.jpg">
+    <title>Changing a Car Tire</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.min.css">
+    <link rel="stylesheet" href="js/script.js">
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="progressBar shadow">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <a href="index.html"><img src="imgs/weblogocar.gif" alt="site logo"></a>
+        <div class="primary-nav">
+            <ul>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="prep.html">Preparations</a></li>
+                <li><a href="raise.html">Raising Vehicle</a></li>
+                <li><a href="tires.html">Switching Tires</a></li>
+                <li><a href="lower.html">Lowering Vehicle</a></li>
+                <li><a href="checklist.html">Post-Checklist</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container bg-light">
+        <div class="row">
+            <div class="container col-12 pt-5 d-flex align-items-center justify-content-center">
+                <h1 class="text-dark">Raising a vehicle</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-12 pt-3 d-flex align-items-center justify-content-center">
+                <h3 class="text-dark">Tools required: Cross lug nut wrench, car jack</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-12 pt-1 pb-5 d-flex align-items-center justify-content-center">
+                <h3 class="text-dark">Optional: lock wheel lug nut key, wooden block or other sturdy material</h3>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="imgs/car_jack_behind.jpg" style="transform: scale(80%); margin-left: 20rem;" alt="wireframe of a backwards-facing car getting jacked">
+            </div>
+
+            <div class="col-md-6">
+                <div class="container mt-5 mb-5 stackMenu">
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <button class="btn btn-primary w-100" onclick="toggleExpand('nutsExpand')">5. Loosen lug
+                                nuts</button>
+                            <div class="collapse" id="nutsExpand">
+                                <div class="card-body d-flex flex-column text-center justify-content-center">
+                                    <p class="text-dark">
+                                        Use the wrench to loosen the lug nuts in a star pattern. Do not
+                                        remove the lug nuts entirely, as this may cause the vehicle to
+                                        become unstable and inflict harm.
+                                    </p>
+                                    <p class="text-dark">If your vehicle uses a lock wheel lug nut, use the
+                                        lock wheel lug nut key to remove this. You may find this in a location
+                                        relative to the spare tire tools in the trunk of your car.
+                                    </p>
+                                    <p class="text-dark">If your car uses a lock wheel lug nut and you do not have
+                                        access
+                                        to the corresponding lock wheel lug nut key, call your mechanic for assistance.
+                                    </p>
+                                    <img src="imgs/lug_nut_star_pattern.jpg" alt="diagram of tightening/loosening 4 or 5 lug nuts in a star pattern">
+                                </div>
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <button class="btn btn-primary w-100" onclick="toggleExpand('jackExpand')">6. Place jack
+                                under vehicle</button>
+                            <div class="collapse" id="jackExpand">
+                                <div class="card-body d-flex flex-column text-center justify-content-center">
+                                    <p class="text-dark">
+                                        Locate the metal ridge of your vehicle body frame closest to the tire
+                                        being replaced. If you are having trouble, seek assistance from the
+                                        car owner manual.
+                                    </p>
+                                    <p class="text-dark">
+                                        Slide the jack under the car and raise it until it sits comfortably
+                                        underneath the ridge. Ensure that the base of the car jack is resting
+                                        fully on the ground to avoid the jack from potentially giving out and dropping
+                                        the car during the tire change.
+                                    </p>
+                                    <img src="imgs/car_jacking_location.png" alt="diagram of car frame ridge locations to put car jack in">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <button class="btn btn-primary w-100" onclick="toggleExpand('raiseExpand')">7. Raise
+                                vehicle</button>
+                            <div class="collapse" id="raiseExpand">
+                                <div class="card-body text-center">
+
+                                    <p class="text-dark">
+                                        Slowly, raise the vehicle with the car jack until the tire is completely off
+                                        the ground by at least a few centimeters (~1cm to 3cm is sufficient).
+                                    </p>
+                                    <p class="text-dark">
+                                        If the car jack becomes unstable or begins to lean off of the ground, lower the
+                                        vehicle and adjust the jack as needed. If necessary, insert a wooden block or
+                                        some other sturdy material underneath the jack to stabilize it.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-12 mb-5 d-flex align-items-center justify-content-center">
+                <a href="tires.html">
+                    <button class="btn btn-outline-secondary btn-grow">Continue</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+            <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function () {
+                    var currentScrollPos = window.pageYOffset;
+                    var navbar = document.getElementById("navbar");
+                    /*keep the navbar on the top of the screen when scrolling up*/
+                    if (prevScrollpos > currentScrollPos) {
+                        console.log(document.getElementById("navbar").style.top = "0");
+                        /*add .background when scrolling up*/
+                        console.log(navbar.classList.add('background'));
+                    }
+                    /*hide navbar off the screen when scrolling down*/
+                    else {
+                        console.log(document.getElementById("navbar").style.top = "-50%");
+                    }
+                    prevScrollpos = currentScrollPos;
+
+                    /* Remove the .background when at the top of screen*/
+                    if (currentScrollPos === 0) {
+                        navbar.classList.remove('background')
+                    }
+                };
+
+                function changeButton() {
+                    var button = document.getElementById("myButton");
+                    button.classList.add("btn-clicked");
+                    button.innerHTML = "Clicked!";
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementById("progress").style.width = "50.01%";
+                });
+
+                function toggleExpand(elementId) {
+                    const element = document.getElementById(elementId);
+                    if (element.classList.contains('show')) {
+                        element.classList.remove('show');
+                    } else {
+                        element.classList.add('show');
+                    }
+                }
+            </script>
+</body>
+
+</html>
